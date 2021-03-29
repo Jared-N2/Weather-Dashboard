@@ -8,4 +8,4 @@ I started by making an account to openWeather and getting myself an API key. The
 ![screenshot](./assets/Screenshot-14.png)
 
 ## webpage link 
-
+https://jared-n2.github.io/Weather-Dashboard/
