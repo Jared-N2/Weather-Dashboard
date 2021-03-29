@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stlyesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+  <title>Document</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">Weather Dashboard</h1>
+    <h6 id="updateTime"></h6>
+  </header>
+
+
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By City</h3>
+        <form id="user-form" class="card-body">
+          <input id="city" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn" id="searchBtn">Search</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Cities Searched</h3>
+        <li id="searchResult"></li>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <h2 id="weather">Showing Weather for: </h2>
+      <div class="weather-group"></div>
+    </div>
+    <div class="col-12 col-md-8">
+      <h2 id="forecast">Five Day Forecast:</h2>
+      <div id="forecast-group"></div>
+    </div>
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/script.js"></script>
+</body>
+
+</html>
