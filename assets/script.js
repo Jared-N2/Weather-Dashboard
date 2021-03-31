@@ -52,9 +52,33 @@ searchBtn.click(function (event) {
             return data.json();
         })
         .then(function (data) {
+            var uvIndex = `https://api.openweathermap.org/data/2.5/uvi?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&appid=b21bd6edae2b620a0e9e90759509f2af`
+
+            fetch(uvIndex)
+            .then(function (uvData) {
+                return uvData.json();
+            })
+            .then(function (uvData) {
+                console.log(uvData)
+                $('#uvData').text(uvData.value)
+            })
+           
+            for (let i = 0; i < data.list.length; i += 8) {
+                $(`#day${i}`).text(data.list[i].dt_txt)
+                $(`#localTemp${i}`).text(data.list[i].main.temp)
+
+                $("iconContainer").src(`http://openweathermap.org/img/wn/${pathToData}@2x.png`)
+                
+            }
+
+
+
             console.log(data)
             // var titleEl = document.getElementById("forecast-group")
             // temperature.append("<li>" + response.main.temp + "</li>")
+            $("#weather").text(data.city.name)
+            $('#today').text(data.list[0].main.temp)
+
             var titleEl = document.createElement('span');
             // titleEl.textContent = 'temp' + data.list[0].main.temp;
             titleEl.append(data.list[0].main.temp)
