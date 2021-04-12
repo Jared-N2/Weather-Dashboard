@@ -67,7 +67,7 @@ searchBtn.click(function (event) {
                 $(`#day${i}`).text(data.list[i].dt_txt)
                 $(`#localTemp${i}`).text(data.list[i].main.temp)
 
-                $("iconContainer").src(`http://openweathermap.org/img/wn/${pathToData}@2x.png`)
+                // $("iconContainer").src(`http://openweathermap.org/img/wn/${pathToData}@2x.png`)
                 
             }
 
